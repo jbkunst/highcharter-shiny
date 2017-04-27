@@ -1,0 +1,11 @@
+.small-box {
+  background-color: white !important;
+}
+
+.small-box>.inner {
+  color: #666666; !important;
+}
+
+.content-wrapper, .right-side {
+  background-color: white !important;
+}

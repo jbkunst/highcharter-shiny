@@ -1,0 +1,9 @@
+{
+    "path" : "~/dev/shiny-apps/highcharter",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
