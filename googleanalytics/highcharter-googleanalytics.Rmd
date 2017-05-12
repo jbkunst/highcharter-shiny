@@ -68,10 +68,11 @@ get_metric_hc <- function(metric = "sessions", daterange, timedim) {
     tbl_df() %>% 
     setNames(c("x", "y")) %>% 
     mutate(x = todatetimefun(x)) %>% 
-    mutate(x = datetime_to_timestamp(x)) %>% 
-    hc_add_series_df(highchart(), ., name = metric) %>% 
+    hchart("line", hcaes(x, y), name = metric) %>% 
     hc_xAxis(type = "datetime") %>% 
     hc_legend(enabled = FALSE) %>% 
+    hc_yAxis(title = list(text = "")) %>% 
+    hc_xAxis(title = list(text = "")) %>% 
     hc_chart(
       type = "area",
       cursor = "pointer",
@@ -244,9 +245,7 @@ renderDataTable({
     map_if(is.numeric, round) %>% 
     as_data_frame()
   
-  datatable(dfref, rownames = FALSE,
-            extensions = c("TableTools"),
-            options = list(scrollY = 350))
+  datatable(dfref, rownames = FALSE, options = list(scrollY = 350))
   
 })
 ```

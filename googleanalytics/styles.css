@@ -23,6 +23,6 @@
   font-size: 0.9em;
 }
 
-tbody td:first-child {
+.dataTable  > tbody td:first-child {
   font-size: 0.80em;
 }
