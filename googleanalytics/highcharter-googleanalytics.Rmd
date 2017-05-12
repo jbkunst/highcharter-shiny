@@ -68,7 +68,7 @@ get_metric_hc <- function(metric = "sessions", daterange, timedim) {
     tbl_df() %>% 
     setNames(c("x", "y")) %>% 
     mutate(x = todatetimefun(x)) %>% 
-    hchart("line", hcaes(x, y), name = metric) %>% 
+    hchart("area", hcaes(x, y), name = metric) %>% 
     hc_xAxis(type = "datetime") %>% 
     hc_legend(enabled = FALSE) %>% 
     hc_yAxis(title = list(text = "")) %>% 
