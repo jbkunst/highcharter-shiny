@@ -32,9 +32,9 @@ shinyServer(function(input, output) {
                   labels = list(step = 10))
     
     highchart() %>%
-      hc_chart(type = "bar", animation = FALSE) %>%
+      hc_chart(type = "bar") %>%
       hc_title(text = sprintf("Population pyramid for %s, %s", nme, input$yr )) %>% 
-      hc_plotOptions(series = list(stacking = "normal"),
+      hc_plotOptions(series = list(stacking = "normal", animation = FALSE),
                      bar = list(groupPadding = 0, pointPadding =  0, borderWidth = 0)) %>% 
       hc_legend(enabled = FALSE) %>% 
       hc_tooltip(shared = FALSE,
