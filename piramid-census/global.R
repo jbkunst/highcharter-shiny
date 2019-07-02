@@ -5,6 +5,7 @@ library(rlist)
 library(highcharter)
 library(viridisLite)
 library(shinythemes)
+library(markdown)
 
 load("dataappmin.RData")
 # data("worldgeojson")

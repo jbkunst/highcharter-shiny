@@ -48,8 +48,8 @@ shinyServer(function(input, output) {
     records <- data %>%
       select(dt, date, temp_rec_high, temp_rec_low) %>% 
       filter(temp_rec_high != "NULL" | temp_rec_low != "NULL") %>% 
-      dmap_if(is.character, str_extract, "\\d+") %>% 
-      dmap_if(is.character, as.numeric) %>% 
+      mutate_if(is.character, str_extract, "\\d+") %>% 
+      mutate_if(is.character, as.numeric) %>% 
       gather(type, value, -date, -dt) %>% 
       filter(!is.na(value)) %>% 
       mutate(type = str_replace(type, "temp_rec_", ""),

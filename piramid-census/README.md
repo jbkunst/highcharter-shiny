@@ -4,6 +4,6 @@ Code is maintained [here][3]
         
 [1]: http://walkerke.github.io/
 [2]: http://jkunst.com
-[3]: https://github.com/jbkunst/shiny-piramid-census
+[3]: https://github.com/jbkunst/shiny-apps-highcharter
 
 ![](screenshot.png)

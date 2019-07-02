@@ -7,7 +7,7 @@ Code is maintained [here][3]
         
 [1]: http://www.nytimes.com/interactive/2016/02/19/us/2015-year-in-weather-temperature-precipitation.html
 [2]: http://jkunst.com
-[3]: https://github.com/jbkunst/shiny-nyt-temp
+[3]: https://github.com/jbkunst/shiny-apps-highcharter
 [4]: http://jkunst.com/highcharter
 [5]: http://www.weather-radials.com/
 

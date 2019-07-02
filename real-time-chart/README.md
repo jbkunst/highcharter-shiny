@@ -4,6 +4,6 @@ Code is maintained [here][3]
         
 [1]: https://t.co/UUOsfRxzL6
 [2]: http://jkunst.com
-[3]: https://github.com/jbkunst/shiny-real-time-chart
+[3]: https://github.com/jbkunst/shiny-apps-highcharter
 
 ![](screenshot.gif)

@@ -12,7 +12,7 @@ shinyServer(function(input, output) {
 
     df2aux <- filter(df2, time == 2016)
     
-    hcmap(data =  df2aux, value = "wage", joinBy = c("iso-a3", "iso3"), name = "Median age", download_map_data = TRUE) %>% 
+    hcmap(map = "custom/world-robinson-highres", data =  df2aux, value = "wage", joinBy = c("iso-a3", "iso3"), name = "Median age", download_map_data = TRUE) %>% 
       hc_title(text = "Median age by country, 2016") %>% 
       hc_colorAxis(min = 10, max = 60, stops = color_stops(n = 10, substring(viridis(30, option = "B"), 0, 7))) %>% 
       hc_mapNavigation(enabled = TRUE, align = "right", buttonOptions = list(verticalAlign = "bottom")) %>% 

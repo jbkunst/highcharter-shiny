@@ -1,0 +1,12 @@
+name: nyt-temp
+title: nyt-temp
+username:
+account: jbkunst
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 814235
+bundleId: 2195085
+url: https://jbkunst.shinyapps.io/nyt-temp/
+when: 1562096493.90767
+asMultiple: FALSE
+asStatic: FALSE
