@@ -5,7 +5,7 @@ library(dplyr)
 
 langs <- getOption("highcharter.lang")
 
-langs$loading <- "<h4>Loading</h4><br><i class='fas fa-circle-notch fa-spin fa-4x'></i>"
+langs$loading <- "<i class='fas fa-circle-notch fa-spin fa-4x'></i>"
 
 options(highcharter.lang = langs)
 
@@ -97,7 +97,13 @@ server <- function(input, output, session){
   
   output$hc_ld <- renderHighchart({ 
     input$reset
-    hchart(cars, "scatter", hcaes(dist, speed))
+    hchart(cars, "scatter", hcaes(dist, speed), id = "cars") %>% 
+      hc_loading(
+        labelStyle = list(color = "white"),
+        style = list(backgroundColor = "gray"),
+        hideDuration = 1000,
+        showDuration = 500
+      )
   })
   
   observeEvent(input$loading, { 
@@ -105,10 +111,22 @@ server <- function(input, output, session){
     highchartProxy("hc_ld") %>%
       hcpxy_loading(action = "show")
     
-    Sys.sleep(2)
+    Sys.sleep(1)
+    
+    dat <- cars %>% 
+      sample_frac(.25) %>% 
+      setNames(c("x", "y")) %>% 
+      mutate(name  = round(runif(nrow(.)), 2)) %>% 
+      list_parse()
+    
+    highchartProxy("hc_ld") %>% 
+      hcpxy_update_series(id = "cars", data = dat)
+    
+    Sys.sleep(1)
     
     highchartProxy("hc_ld") %>%
-      hcpxy_loading(action = "hide")
+      hcpxy_loading(action = "hide") %>% 
+      hcpxy_update_series()
     
   })
   
