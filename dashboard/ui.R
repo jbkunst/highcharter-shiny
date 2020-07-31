@@ -1,5 +1,0 @@
-dashboardPage(
-  dashboardHeader(),
-  dashboardSidebar(),
-  dashboardBody()
-)

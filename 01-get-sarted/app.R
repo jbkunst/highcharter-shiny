@@ -3,24 +3,30 @@ library(shiny)
 library(shinythemes)
 library(highcharter)
 
-
-# Define UI
 ui <- fluidPage(
   theme = shinytheme("paper"),
   fluidRow(
-    column(width = 6, ),
-    column(width = 6, offset = 6),
-    column(width = 6),
-    column(width = 6),
-    column(width = 6),
+    column(width = 6, offset = 3, highchartOutput("chart1")),
+    column(width = 6, offset = 3, highchartOutput("chart2")),
   )
                
 )
 
-# Define server function
 server <- function(input, output) {
+  
+  output$chart1 <- renderHighchart({
+    
+    highcharts_demo()
+    
+  })
+  
+  output$chart2 <- renderHighchart({
+    
+    hchart(iris, "scatter", hcaes(Sepal.Length, Sepal.Width, group = Species))
+    
+  })
   
   
 }
 
-shinyApp(ui, server, options = list(display.mode = "showcase"))
+shinyApp(ui, server)
