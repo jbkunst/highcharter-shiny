@@ -3,6 +3,12 @@ library(shiny)
 library(shinythemes)
 library(dplyr)
 
+langs <- getOption("highcharter.lang")
+
+langs$loading <- "<h4>Loading</h4><br><i class='fas fa-circle-notch fa-spin fa-4x'></i>"
+
+options(highcharter.lang = langs)
+
 column <- function(..., width = 12)  shiny::column(width = width, ...)
 
 ui <- fluidPage(
