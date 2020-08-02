@@ -11,9 +11,8 @@ dashboardPage(
     tags$script(HTML(
       
       "var t = setInterval(function(){
-        var resizeEvent = new Event('resize');
-        window.dispatchEvent(resizeEvent);  
-      }, 1000);"
+        Highcharts.charts.map(function(e) { e.reflow() });
+       }, 250);"
       
     )),
     
