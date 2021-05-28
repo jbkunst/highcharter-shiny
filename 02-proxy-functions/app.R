@@ -14,15 +14,11 @@ column <- function(..., width = 12)  shiny::column(width = width, ...)
 ui <- fluidPage(
   theme = shinytheme("paper"),
   fluidRow(
+    # reset charts
     column(
       tags$hr(),
       actionButton("reset", "Reset charts", class = "btn-danger"),
       tags$hr()
-    ),
-    column(
-      actionButton("addpnts", "Add Series"),
-      tags$hr(),
-      highchartOutput("hc_nd")
     ),
     column(
       actionButton("mkpreds", "Add Series linkedTo existing one"),
@@ -38,6 +34,11 @@ ui <- fluidPage(
       actionButton("remove", "Remove series"),
       tags$hr(),
       highchartOutput("hc_rm")
+    ),
+    column(
+      actionButton("addpnts", "Add Series"),
+      tags$hr(),
+      highchartOutput("hc_nd")
     ),
     column(
       actionButton("remove_all", "Remove all series"),

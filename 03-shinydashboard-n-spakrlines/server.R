@@ -79,9 +79,4 @@ shinyServer(function(input, output, session) {
     
   })
   
-  observe({
-    state <- input$sidebarCollapsed
-    print(state)
-  })
-  
 })

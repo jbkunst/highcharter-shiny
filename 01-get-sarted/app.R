@@ -6,8 +6,8 @@ library(highcharter)
 ui <- fluidPage(
   theme = shinytheme("paper"),
   fluidRow(
-    column(width = 6, offset = 3, highchartOutput("chart1")),
-    column(width = 6, offset = 3, highchartOutput("chart2")),
+    column(width = 12, highchartOutput("chart1")),
+    column(width = 12, highchartOutput("chart2")),
   )
                
 )
