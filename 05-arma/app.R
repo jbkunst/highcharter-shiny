@@ -25,9 +25,11 @@ hc_afc <-  highchart() %>%
   hc_add_series(data = smpACF, id = "sacf", name = "Estimated") %>% 
   hc_tooltip(table = TRUE) %>% 
   hc_plotOptions(
-    series = list(pointWidth = 5, 
-                  animation = list(duration = DURATION),
-                  marker = list(symbol = "circle"))
+    series = list(
+      pointWidth = 5, 
+      animation = list(duration = DURATION),
+      marker = list(symbol = "circle")
+      )
     )
 
 hc_afc

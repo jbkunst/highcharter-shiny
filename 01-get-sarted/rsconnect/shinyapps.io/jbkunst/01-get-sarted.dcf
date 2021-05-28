@@ -1,0 +1,13 @@
+name: 01-get-sarted
+title: 01-get-sarted
+username:
+account: jbkunst
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4200762
+bundleId: 4652089
+url: https://jbkunst.shinyapps.io/01-get-sarted/
+when: 1622226319.24264
+lastSyncTime: 1622226319.24264
+asMultiple: FALSE
+asStatic: FALSE

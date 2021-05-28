@@ -4,9 +4,10 @@ username:
 account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 940016
-bundleId: 2195104
+appId: 4200945
+bundleId: 4652277
 url: https://jbkunst.shinyapps.io/piramid-census/
-when: 1562096986.63292
+when: 1622230026.42548
+lastSyncTime: 1622230026.42548
 asMultiple: FALSE
 asStatic: FALSE
