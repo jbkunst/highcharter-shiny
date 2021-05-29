@@ -3,12 +3,41 @@ shinyServer(function(input, output) {
   
   data <- reactive({
     
+    highchartProxy("hc1") %>%
+      hcpxy_loading(action = "show")
+    
+    highchartProxy("hc2") %>%
+      hcpxy_loading(action = "show")
+    
     url_file <- file.path(url_base, "assets", sprintf("%s.csv", input$city))
     
     # url_file <- "http://graphics8.nytimes.com/newsgraphics/2016/01/01/weather/assets/new-york_ny.csv"
     message(url_file)
     
-    data <- read_csv(url_file) %>% 
+    data <- read_csv(
+      url_file,
+      col_types = cols(
+        date = col_date(format = ""),
+        month = col_double(),
+        temp_max = col_double(),
+        temp_min = col_double(),
+        temp_rec_max = col_logical(),
+        temp_rec_min = col_logical(),
+        temp_avg_max = col_double(),
+        temp_avg_min = col_double(),
+        temp_rec_high = col_logical(),
+        temp_rec_low = col_logical(),
+        precip_value = col_double(),
+        precip_actual = col_double(),
+        precip_normal = col_double(),
+        precip_rec = col_character(),
+        snow_rec = col_character(),
+        annual_average_temperature = col_double(),
+        departure_from_normal = col_double(),
+        total_precipitation = col_double(),
+        precipitation_departure_from_normal = col_double()
+        )
+      ) %>% 
       mutate(dt = datetime_to_timestamp(date)) 
     
     data

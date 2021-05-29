@@ -5,9 +5,9 @@ account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4200936
-bundleId: 4652266
+bundleId: 4654796
 url: https://jbkunst.shinyapps.io/nyt-temp/
-when: 1622229861.94673
-lastSyncTime: 1622229861.94673
+when: 1622303565.59059
+lastSyncTime: 1622303565.59059
 asMultiple: FALSE
 asStatic: FALSE
