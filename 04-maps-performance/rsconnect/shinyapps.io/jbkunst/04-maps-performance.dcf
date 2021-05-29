@@ -5,9 +5,9 @@ account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4200578
-bundleId: 4651962
+bundleId: 4653352
 url: https://jbkunst.shinyapps.io/04-maps-performance/
-when: 1622223877.19067
-lastSyncTime: 1622223877.19067
+when: 1622261061.90708
+lastSyncTime: 1622261061.90708
 asMultiple: FALSE
 asStatic: FALSE

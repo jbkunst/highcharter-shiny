@@ -5,9 +5,9 @@ account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2712465
-bundleId: 4652105
+bundleId: 4653364
 url: https://jbkunst.shinyapps.io/05-arma/
-when: 1622226742.96143
-lastSyncTime: 1622226742.96143
+when: 1622261358.80755
+lastSyncTime: 1622261358.80755
 asMultiple: FALSE
 asStatic: FALSE

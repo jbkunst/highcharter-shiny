@@ -10,7 +10,6 @@ library(purrr)
 library(rmarkdown)
 
 options(highcharter.theme = hc_theme_smpl())
-options(shiny.launch.browser = TRUE)
 
 url_base <- "http://graphics8.nytimes.com/newsgraphics/2016/01/01/weather"
 

@@ -38,8 +38,13 @@ server <- function(input, output) {
     }
     
     highchart(type = "map") %>% 
-      hc_add_series(mapData = mapdata, data = data, joinBy = c("hc-key"),
-                    borderWidth = 0) %>% 
+      hc_add_series(
+        mapData = mapdata, 
+        data = data, 
+        joinBy = c("hc-key"),
+        borderWidth = 0
+        ) %>% 
+      hc_chart(zoomType = "xy") %>% 
       hc_colorAxis(stops = color_stops())
     
   })
