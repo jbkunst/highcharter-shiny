@@ -5,9 +5,7 @@ account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4200774
-bundleId: 4652837
+bundleId: 4655643
 url: https://jbkunst.shinyapps.io/03-shinydashboard-n-spakrlines/
-when: 1622242361.58904
-lastSyncTime: 1622242361.58904
-asMultiple: FALSE
-asStatic: FALSE
+when: 1622333042.21367
+lastSyncTime: 1622333042.21367

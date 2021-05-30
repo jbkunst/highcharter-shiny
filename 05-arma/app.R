@@ -3,6 +3,8 @@ library(shinythemes)
 library(highcharter)
 library(stats)
 
+options(highcharter.theme = hc_theme_smpl())
+
 LAG_MAX <- 10
 STR_OBS <- 20
 NOBS    <- 5000

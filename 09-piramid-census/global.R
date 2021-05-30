@@ -5,13 +5,11 @@ library(rlist)
 library(highcharter)
 library(viridisLite)
 library(shinythemes)
-library(markdown)
 
 load("dataappmin.RData")
 # data("worldgeojson")
 
 options(highcharter.theme = hc_theme_smpl())
-options(shiny.launch.browser = TRUE)
 
 input <- list(yr = sample(yrs, size = 1), hcworldinput = "Canada")
 
