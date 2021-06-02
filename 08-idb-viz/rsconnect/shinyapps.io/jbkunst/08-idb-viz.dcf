@@ -5,7 +5,9 @@ account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4204443
-bundleId: 4655655
+bundleId: 4662892
 url: https://jbkunst.shinyapps.io/08-idb-viz/
-when: 1622333368.06994
-lastSyncTime: 1622333368.06994
+when: 1622516409.66582
+lastSyncTime: 1622516409.66582
+asMultiple: FALSE
+asStatic: FALSE

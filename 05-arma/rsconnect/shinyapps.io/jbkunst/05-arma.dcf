@@ -1,11 +1,13 @@
 name: 05-arma
-title: 05-arma
+title:
 username:
 account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2712465
-bundleId: 4655645
+bundleId: 4661402
 url: https://jbkunst.shinyapps.io/05-arma/
-when: 1622333117.37278
-lastSyncTime: 1622333117.37278
+when: 1622478555.44005
+lastSyncTime: 1622478555.44005
+asMultiple: FALSE
+asStatic: FALSE

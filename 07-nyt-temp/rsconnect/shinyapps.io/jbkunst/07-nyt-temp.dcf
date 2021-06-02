@@ -1,0 +1,11 @@
+name: 07-nyt-temp
+title:
+username:
+account: jbkunst
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4204521
+bundleId: 4655732
+url: https://jbkunst.shinyapps.io/07-nyt-temp/
+when: 1622335824.59838
+lastSyncTime: 1622335824.59838

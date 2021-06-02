@@ -5,16 +5,17 @@ library(stats)
 
 options(highcharter.theme = hc_theme_smpl())
 
-LAG_MAX <- 10
-STR_OBS <- 20
-NOBS    <- 5000
-AR      <- 0.75
-MA      <- 0.20
-SEED    <- 123
-DURATION<- 100 # needs to be <= than min refresh interval
+LAG_MAX  <- 10
+STR_OBS  <- 20
+NOBS     <- 5000
+AR       <- 0.75
+MA       <- 0.20
+SEED     <- 123
+DURATION <- 100 # needs to be <= than min refresh interval
 
 # start chart
 set.seed(SEED)
+
 ts_aux <- arima.sim(model = list(ar = AR, ma = MA), n = STR_OBS)
 
 teoACF <- as.numeric(ARMAacf(ar = AR, ma = MA, lag.max = LAG_MAX, pacf = FALSE))
@@ -23,9 +24,13 @@ smpACF <- as.numeric(acf(ts_aux, lag.max = LAG_MAX, plot = FALSE)$acf)
 hc_afc <-  highchart() %>% 
   hc_chart(type = "column") %>% 
   hc_yAxis(min = -1, max = 1) %>%
+  hc_add_series(data = smpACF, id = "sacf", name = "Estimated", color = "#428bca") %>% 
   hc_add_series(data = teoACF, id = "tacf", name = "Theoretical") %>%
-  hc_add_series(data = smpACF, id = "sacf", name = "Estimated") %>% 
-  hc_tooltip(table = TRUE) %>% 
+  hc_tooltip(
+    table = TRUE, 
+    headerFormat = "<small>Lag {point.key}</small><table>",
+    valueDecimals = 3
+    ) %>% 
   hc_plotOptions(
     series = list(
       pointWidth = 5, 
@@ -42,9 +47,9 @@ ui <- fluidPage(
     column(12, tags$h3("ARMA model simulation"))
   ),
   fluidRow(
-    column(4, sliderInput("ar"   , "AR"  , -.9, .9, value = AR, 0.05, width = "100%")),
-    column(4, sliderInput("ma"   , "MA"  , -.9, .9, value = MA, 0.05, width = "100%")),
-    column(4, sliderInput("interval"   , "Refresh interval"  , 0.5, 2, value = 1, step = 0.25, width = "100%")),
+    column(4, sliderInput("ar", "AR", -.9, .9, value = AR, 0.05, width = "100%")),
+    column(4, sliderInput("ma", "MA", -.9, .9, value = MA, 0.05, width = "100%")),
+    column(4, sliderInput("interval", "Refresh (secs.)", 0.5, 2, value = 1, step = 0.5, width = "100%")),
     ),
   fluidRow(
     column(12, uiOutput("model"))
@@ -90,10 +95,12 @@ server <- function(input, output, session) {
     hchart(
       df, "line",
       id = "ts",
+      color =  "#428bca",
       name = "Time series",
       marker = list(enabled = FALSE),
-      animation = list(duration = DURATION)
-        ) %>% 
+      animation = list(duration = DURATION),
+      tooltip = list(valueDecimals = 3)
+      ) %>% 
       hc_navigator(
         enabled = TRUE, 
         series = list(type = "line"),

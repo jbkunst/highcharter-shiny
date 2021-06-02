@@ -13,8 +13,13 @@ pokemon <- pokemon %>%
 pkmn_type_color <- pokemon %>% 
   distinct(type_1, color_1)
 
+scales::show_col(pkmn_type_color$color_1, borders = FALSE)
+
 pokemon <- pokemon %>% 
-  mutate(type_1 = factor(type_1, labels = pull(pkmn_type_color, type_1)))
+  mutate(type_1 = factor(type_1, levels = pull(pkmn_type_color, type_1))) %>% 
+  select(id, pokemon, attack, defense, type_1)
+
+pokemon
 
 hc <- hchart(
   pokemon,
@@ -23,6 +28,7 @@ hc <- hchart(
   color = pull(pkmn_type_color, color_1)
   )
 
+hc
 
 ui <- fluidPage(
   theme = shinytheme("paper"),

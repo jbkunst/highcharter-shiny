@@ -1,11 +1,13 @@
 name: 03-events
-title:
+title: 03-events
 username:
 account: jbkunst
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4204424
-bundleId: 4655639
+bundleId: 4661894
 url: https://jbkunst.shinyapps.io/03-events/
-when: 1622332967.1793
-lastSyncTime: 1622332967.1793
+when: 1622490463.81778
+lastSyncTime: 1622490463.81778
+asMultiple: FALSE
+asStatic: FALSE
