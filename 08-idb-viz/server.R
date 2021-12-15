@@ -61,41 +61,4 @@ shinyServer(function(input, output) {
     
   })
   
-  
-  # output$vb_pop <- renderValueBox({
-  #   
-  #   dfip <- dfip()
-  #   
-  #   dfippop <- dfip %>%group_by(time) %>% summarise(pop = sum(pop))
-  #   
-  #   dfippopy <- filter(dfippop, time == input$year)
-  #     
-  #   hcspakr <- hchart(dfippop, "area", hcaes(time, pop), name = "population") %>% 
-  #     hc_add_series(dfippopy, "bubble", hcaes(time, pop)) %>% 
-  #     hc_add_theme(thm_spark()) %>% 
-  #     hc_size(height = 100)
-  #   
-  #   valueBox(
-  #     tagList(
-  #       fmtnum(dfippopy$pop),
-  #       hcspakr
-  #       ),
-  #     subtitle = NULL,
-  #     icon = icon("chart")
-  #     )
-  #   
-  # })
-  # 
-  # output$vb_pop_sel <- renderValueBox({
-  #   valueBox(tagList("50"), "gola", icon("car"), color = "teal")
-  # })
-  # 
-  # output$vb_age_avg <- renderValueBox({
-  #   valueBox(tagList("50"), "gola", icon("car"), color = "teal")
-  # })
-  # 
-  # output$vb_ratio <- renderValueBox({
-  #   valueBox(tagList("50"), "gola", icon("car"), color = "teal")
-  # })
-  
 })

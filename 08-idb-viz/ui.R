@@ -20,9 +20,6 @@ dashboardPage(
         column(
           12,
           highchartOutput("agec_chart")
-          # valueBoxOutput("vb_pop_sel", width = 12),
-          # valueBoxOutput("vb_age_avg", width = 12),
-          # valueBoxOutput("vb_ratio", width = 12)
           )
         )
       )
