@@ -1,4 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
-  <rect width="1600" height="900" fill="#f5f7f8"/>
-  <text x="80" y="820" font-family="Arial" font-size="72" fill="#111315">Preview coming soon</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Highcharter application preview</title>
+  <desc id="desc">Branded placeholder shown until an application screenshot is generated.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#47475c"/>
+      <stop offset="1" stop-color="#313143"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="150" r="280" fill="#a3edba" opacity="0.12"/>
+  <path d="M140 610 C330 460 430 650 610 500 S900 330 1060 470 S1280 540 1450 300" fill="none" stroke="#a3edba" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="140" cy="610" r="18" fill="#ffffff"/>
+  <circle cx="610" cy="500" r="18" fill="#ffffff"/>
+  <circle cx="1060" cy="470" r="18" fill="#ffffff"/>
+  <circle cx="1450" cy="300" r="18" fill="#ffffff"/>
+  <text x="140" y="170" font-family="Arial, sans-serif" font-size="82" font-weight="700" fill="#ffffff">highcharter shiny</text>
+  <text x="140" y="760" font-family="Arial, sans-serif" font-size="42" fill="#d9d9e3">Preview generated on the first site build</text>
 </svg>
