@@ -9,7 +9,10 @@ app_theme <- bs_theme(
   version = 5,
   bootswatch = "flatly",
   primary = "#47475c",
-  success = "#a3edba"
+  secondary = "#73738c",
+  success = "#a3edba",
+  bg = "#f7f8fb",
+  fg = "#47475c"
 )
 
 data(pokemon)
@@ -37,18 +40,42 @@ hc <- hchart(
 
 hc
 
-ui <- fluidPage(
+ui <- page_fluid(
+  title = "Highcharter events as Shiny inputs",
   theme = app_theme,
-  h3("Highcharter as Shiny Inputs"),
-  fluidRow(
-    column(6, h4("Point Event"), highchartOutput("hcpkmn")),
-    column(3, h5("MouseOver"), verbatimTextOutput("hc_1_input1")),
-    column(3, h5("Click"), verbatimTextOutput("hc_1_input2"))
+  h2("Highcharter events as Shiny inputs"),
+  p("Move over or click the charts to inspect point and series event payloads."),
+  card(
+    full_screen = TRUE,
+    card_header("Point events"),
+    layout_columns(
+      col_widths = c(6, 3, 3),
+      highchartOutput("hcpkmn"),
+      card(
+        card_header("Mouse over"),
+        verbatimTextOutput("hc_1_input1")
+      ),
+      card(
+        card_header("Click"),
+        verbatimTextOutput("hc_1_input2")
+      )
+    )
   ),
-  fluidRow(
-    column(6, h4("Series Event"), highchartOutput("hcpkmn2")),
-    column(3, h5("MouseOver"), verbatimTextOutput("hc_2_input1")),
-    column(3, h6("Click"), verbatimTextOutput("hc_2_input2"))
+  card(
+    full_screen = TRUE,
+    card_header("Series events"),
+    layout_columns(
+      col_widths = c(6, 3, 3),
+      highchartOutput("hcpkmn2"),
+      card(
+        card_header("Mouse over"),
+        verbatimTextOutput("hc_2_input1")
+      ),
+      card(
+        card_header("Click"),
+        verbatimTextOutput("hc_2_input2")
+      )
+    )
   )
 )
 
