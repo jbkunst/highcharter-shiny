@@ -9,7 +9,10 @@ app_theme <- bs_theme(
   version = 5,
   bootswatch = "flatly",
   primary = "#47475c",
-  success = "#a3edba"
+  secondary = "#73738c",
+  success = "#a3edba",
+  bg = "#f7f8fb",
+  fg = "#47475c"
 )
 
 LAG_MAX  <- 10
@@ -20,7 +23,6 @@ MA       <- 0.20
 SEED     <- 123
 DURATION <- 100 # needs to be <= than min refresh interval
 
-# start chart
 set.seed(SEED)
 
 ts_aux <- arima.sim(model = list(ar = AR, ma = MA), n = STR_OBS)
@@ -48,22 +50,39 @@ hc_afc <- highchart() %>%
 
 hc_afc
 
-ui <- fluidPage(
+ui <- page_sidebar(
+  title = "ARMA process simulation",
   theme = app_theme,
-  fluidRow(
-    column(12, tags$h3("ARMA model simulation"))
+  sidebar = sidebar(
+    title = "Simulation controls",
+    sliderInput("ar", "AR", -.9, .9, value = AR, 0.05, width = "100%"),
+    sliderInput("ma", "MA", -.9, .9, value = MA, 0.05, width = "100%"),
+    sliderInput(
+      "interval",
+      "Refresh (seconds)",
+      0.5,
+      2,
+      value = 1,
+      step = 0.5,
+      width = "100%"
+    ),
+    card(
+      card_header("Current model"),
+      uiOutput("model")
+    )
   ),
-  fluidRow(
-    column(4, sliderInput("ar", "AR", -.9, .9, value = AR, 0.05, width = "100%")),
-    column(4, sliderInput("ma", "MA", -.9, .9, value = MA, 0.05, width = "100%")),
-    column(4, sliderInput("interval", "Refresh (secs.)", 0.5, 2, value = 1, step = 0.5, width = "100%"))
-  ),
-  fluidRow(
-    column(12, uiOutput("model"))
-  ),
-  fluidRow(
-    column(8, highchartOutput("ts")),
-    column(4, highchartOutput("acf"))
+  layout_columns(
+    col_widths = c(8, 4),
+    card(
+      full_screen = TRUE,
+      card_header("Simulated time series"),
+      highchartOutput("ts")
+    ),
+    card(
+      full_screen = TRUE,
+      card_header("Autocorrelation"),
+      highchartOutput("acf")
+    )
   )
 )
 
@@ -73,7 +92,6 @@ server <- function(input, output, session) {
   ts <- reactive({
     value(STR_OBS)
 
-    # input <- list(ar = 0.9, ma = 0.1, nobs = 200)
     set.seed(SEED)
     ts <- arima.sim(model = list(ar = input$ar, ma = input$ma), n = NOBS)
   })
@@ -94,7 +112,8 @@ server <- function(input, output, session) {
     df <- data.frame(x = 1:STR_OBS, y = head(ts, STR_OBS))
 
     hchart(
-      df, "line",
+      df,
+      "line",
       id = "ts",
       color = "#428bca",
       name = "Time series",
@@ -115,7 +134,6 @@ server <- function(input, output, session) {
           opposite = TRUE,
           tickPositioner = JS("function(min,max){
                                  var data = this.chart.yAxis[0].series[0].processedYData;
-                                 //last point
                                  return [Math.round(1000 * data[data.length-1])/1000];
                               }")
         )
@@ -127,7 +145,6 @@ server <- function(input, output, session) {
   })
 
   observeEvent(ts(), {
-    # if ts change redraw the teo ACF
     ts <- ts()
 
     teoACF <- as.numeric(ARMAacf(ar = input$ar, ma = input$ma, lag.max = LAG_MAX, pacf = FALSE))
@@ -144,7 +161,6 @@ server <- function(input, output, session) {
     invalidateLater(1000 * interval, session)
 
     animation <- TRUE
-
     value_to_add <- isolate(value()) + 1
 
     value(value_to_add)
