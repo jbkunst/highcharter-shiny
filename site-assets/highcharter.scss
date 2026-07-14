@@ -1,0 +1,205 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700&family=Alegreya+Sans+SC:wght@500;700&display=swap');
+
+$primary: #47475c;
+$secondary: #73738c;
+$success: #a3edba;
+$body-bg: #f7f8fb;
+$body-color: #47475c;
+$link-color: #3b74b8;
+$link-hover-color: #285680;
+$font-family-sans-serif: "Alegreya Sans", "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Alegreya Sans SC", "Helvetica Neue", Arial, sans-serif;
+$headings-font-weight: 600;
+$border-radius: 0.4rem;
+$border-radius-lg: 0.65rem;
+
+/*-- scss:rules --*/
+
+body {
+  font-size: 1.06rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {
+  background: #47475c;
+  border-bottom: 3px solid #a3edba;
+  box-shadow: 0 8px 24px rgba(38, 38, 54, 0.16);
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: lowercase;
+}
+
+.navbar .nav-link,
+.navbar .quarto-navbar-tools .quarto-navigation-tool {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+.navbar .quarto-navbar-tools .quarto-navigation-tool:hover {
+  color: #a3edba !important;
+}
+
+.quarto-title-block {
+  display: none;
+}
+
+#quarto-content {
+  padding-top: 0;
+}
+
+.catalog-hero {
+  margin: 1.5rem 0 2.25rem;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(163, 237, 186, 0.22), transparent 30%),
+    linear-gradient(135deg, #47475c 0%, #363649 100%);
+  border-bottom: 5px solid #a3edba;
+  border-radius: 0.75rem;
+  box-shadow: 0 18px 48px rgba(38, 38, 54, 0.2);
+}
+
+.catalog-kicker {
+  margin-bottom: 0.75rem;
+  color: #a3edba;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.catalog-hero h1 {
+  max-width: 800px;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.catalog-hero p {
+  max-width: 760px;
+  margin-bottom: 1.4rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+.catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.catalog-actions .btn-primary {
+  color: #313143;
+  background: #a3edba;
+  border-color: #a3edba;
+  font-weight: 700;
+}
+
+.catalog-actions .btn-primary:hover {
+  color: #313143;
+  background: #c3f5d2;
+  border-color: #c3f5d2;
+}
+
+.catalog-actions .btn-outline-light {
+  font-weight: 700;
+}
+
+.catalog-section-title {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  color: #47475c;
+  font-size: 1.8rem;
+}
+
+.catalog-help {
+  margin-bottom: 1.5rem;
+  color: #727286;
+}
+
+.quarto-listing-filter .form-control {
+  min-height: 2.75rem;
+  background: #ffffff;
+  border: 1px solid #dadae5;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 14px rgba(38, 38, 54, 0.05);
+}
+
+.quarto-listing-container-grid .quarto-grid-item {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e3eb;
+  border-radius: 0.6rem;
+  box-shadow: 0 8px 24px rgba(38, 38, 54, 0.07);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.quarto-listing-container-grid .quarto-grid-item:hover {
+  transform: translateY(-4px);
+  border-color: #a3edba;
+  box-shadow: 0 16px 36px rgba(38, 38, 54, 0.13);
+}
+
+.quarto-listing-container-grid .card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #ededf3;
+  border-bottom: 1px solid #e3e3eb;
+}
+
+.quarto-listing-container-grid .card-title {
+  color: #47475c;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.quarto-listing-container-grid .card-text {
+  color: #66667a;
+  line-height: 1.5;
+}
+
+.listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.listing-category {
+  padding: 0.2rem 0.5rem;
+  color: #47475c;
+  background: #e9f9ee;
+  border: 1px solid #c9efd5;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.nav-footer {
+  margin-top: 3rem;
+  color: rgba(255, 255, 255, 0.78);
+  background: #47475c;
+  border-top: 3px solid #a3edba;
+}
+
+@media (max-width: 767px) {
+  .catalog-hero {
+    margin-top: 0.75rem;
+    border-radius: 0.5rem;
+  }
+}
