@@ -1,27 +1,27 @@
-dashboardPage(
-  dashboardHeader(disable = TRUE),
-  dashboardSidebar(disable = TRUE),
-  dashboardBody(
-    tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")),
-    fluidRow(
-      column(
-        width = 4,
-        offset = 4,
-        selectInput("country", NULL, choices = opts, selectize = TRUE, width = "100%"),
-        )
-      ),
-    fluidRow(
-      column(
-        width = 7,
-        highchartOutput("area_chart")
-        ),
-      column(
-        5,
-        column(
-          12,
-          highchartOutput("agec_chart")
-          )
-        )
-      )
+page_sidebar(
+  title = "International population explorer",
+  theme = app_theme,
+  sidebar = sidebar(
+    title = "Country",
+    selectInput(
+      "country",
+      "Select a country",
+      choices = opts,
+      selectize = TRUE,
+      width = "100%"
+    )
+  ),
+  layout_columns(
+    col_widths = c(7, 5),
+    card(
+      full_screen = TRUE,
+      card_header("Population by age group"),
+      highchartOutput("area_chart")
+    ),
+    card(
+      full_screen = TRUE,
+      card_header("Selected age group"),
+      highchartOutput("agec_chart")
+    )
   )
 )
