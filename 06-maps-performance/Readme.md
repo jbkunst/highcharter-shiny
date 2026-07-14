@@ -1,20 +1,6 @@
-This app show how use the highcharts map collections in an efficient way. This
-is preloading the map using the highchart predefined maps. For example
-this example uses a high resolution map which is loaded one time. To do this
-you need use the `tags$script(stc = link_to_map)` in your user interface 
-definition.
+This app compares two ways of supplying map geometry to a Highcharter map.
 
-```r
-tags$script(src = "https://code.highcharts.com/mapdata/custom/world-robinson-highres.js")
-```
+- **Preloaded map:** the browser loads the Highcharts map collection once and the chart references it by name.
+- **Transferred map:** the Shiny server sends the complete map data with the chart.
 
-Then, in your server:
-
-```r
-mapdata <- JS("Highcharts.maps['custom/world-robinson-highres']")
-
-highchart(type = "map") %>% 
-  hc_add_series(mapData = mapdata, data = data, joinBy = c("hc-key"))
-```
-
-You can see other predefined maps in https://code.highcharts.com/mapdata/.
+The example helps illustrate how preloading large map assets can reduce repeated data transfer.
