@@ -1,7 +1,3 @@
-Title: Proxy functions
-Author: Joshua Kunst
-AuthorUrl: https://jkunst.com/
-License: MIT
-DisplayMode: Showcase
-Tags: getting-started
-Type: Shiny
+Title: Highcharter Proxy Functions
+Description: Explore how proxy functions add, remove, and update chart series and points without rebuilding the widget.
+Categories: proxy, interactivity, shiny
