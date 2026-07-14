@@ -1,22 +1,29 @@
 library(shiny)
-library(shinythemes)
+library(bslib)
 library(highcharter)
 library(dplyr)
 
 options(highcharter.theme = hc_theme_smpl())
 
+app_theme <- bs_theme(
+  version = 5,
+  bootswatch = "flatly",
+  primary = "#47475c",
+  success = "#a3edba"
+)
+
 data(pokemon)
 
-pokemon <- pokemon %>% 
+pokemon <- pokemon %>%
   filter(id <= 151)
 
-pkmn_type_color <- pokemon %>% 
+pkmn_type_color <- pokemon %>%
   distinct(type_1, color_1)
 
 scales::show_col(pkmn_type_color$color_1, borders = FALSE)
 
-pokemon <- pokemon %>% 
-  mutate(type_1 = factor(type_1, levels = pull(pkmn_type_color, type_1))) %>% 
+pokemon <- pokemon %>%
+  mutate(type_1 = factor(type_1, levels = pull(pkmn_type_color, type_1))) %>%
   select(id, pokemon, attack, defense, type_1)
 
 pokemon
@@ -26,12 +33,12 @@ hc <- hchart(
   "scatter",
   hcaes(x = attack, y = defense, group = type_1, name = pokemon),
   color = pull(pkmn_type_color, color_1)
-  )
+)
 
 hc
 
 ui <- fluidPage(
-  theme = shinytheme("paper"),
+  theme = app_theme,
   h3("Highcharter as Shiny Inputs"),
   fluidRow(
     column(6, h4("Point Event"), highchartOutput("hcpkmn")),
@@ -45,36 +52,26 @@ ui <- fluidPage(
   )
 )
 
-server <-  function(input, output) {
-  
+server <- function(input, output) {
   output$hcpkmn <- renderHighchart({
-    
-    hc %>% 
-      hc_plotOptions(series = list(cursor = "pointer")) %>% 
-      hc_add_event_point(event = "mouseOver") %>% 
+    hc %>%
+      hc_plotOptions(series = list(cursor = "pointer")) %>%
+      hc_add_event_point(event = "mouseOver") %>%
       hc_add_event_point(event = "click")
-    
   })
-  
-  output$hc_1_input1 <- renderPrint({ input$hcpkmn_mouseOver })
-  
-  output$hc_1_input2 <- renderPrint({ input$hcpkmn_click })
-  
-  output$hcpkmn2 <- renderHighchart({
 
+  output$hc_1_input1 <- renderPrint({ input$hcpkmn_mouseOver })
+  output$hc_1_input2 <- renderPrint({ input$hcpkmn_click })
+
+  output$hcpkmn2 <- renderHighchart({
     hc %>%
       hc_plotOptions(series = list(cursor = "pointer")) %>%
       hc_add_event_series(event = "mouseOver") %>%
       hc_add_event_series(event = "click")
-
   })
 
   output$hc_2_input1 <- renderPrint({ input$hcpkmn2_mouseOver })
-  
   output$hc_2_input2 <- renderPrint({ input$hcpkmn2_click })
-  
 }
 
 shinyApp(ui = ui, server = server)
-
-
