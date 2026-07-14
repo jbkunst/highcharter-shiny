@@ -1,4 +1,4 @@
-This app recreates weather visualizations inspired by The New York Times project *How Much Warmer Was Your City in 2015?*
+This `bslib` dashboard recreates weather visualizations inspired by The New York Times project *How Much Warmer Was Your City in 2015?*
 
 For a selected city, it displays:
 
