@@ -1,8 +1,17 @@
 library(highcharter)
 library(shiny)
+library(bslib)
+
+app_theme <- bs_theme(
+  version = 5,
+  bootswatch = "flatly",
+  primary = "#47475c",
+  success = "#a3edba"
+)
 
 shinyApp(
   ui = fluidPage(
+    theme = app_theme,
     wellPanel("mouseOver and click points for additional information"),
     uiOutput("click_ui"),
     uiOutput("mouseOver_ui"),
@@ -10,29 +19,29 @@ shinyApp(
   ),
   server = function(input, output) {
     df <- data.frame(x = 1:5, y = 1:5, otherInfo = letters[11:15])
-    
+
     output$plot_hc <- renderHighchart({
       highchart() %>%
         hc_add_series(df, "scatter") %>%
         hc_add_event_point(event = "click") %>%
         hc_add_event_point(event = "mouseOver")
     })
-    
+
     observeEvent(input$plot_hc, print(paste("plot_hc", input$plot_hc)))
-    
+
     output$click_ui <- renderUI({
       if (is.null(input$plot_hc_click)) {
         return()
       }
-      
+
       wellPanel("Coordinates of clicked point: ", input$plot_hc_click$x, input$plot_hc_click$y)
     })
-    
+
     output$mouseOver_ui <- renderUI({
       if (is.null(input$plot_hc_mouseOver)) {
         return()
       }
-      
+
       wellPanel("Coordinates of mouseOvered point: ", input$plot_hc_mouseOver$x, input$plot_hc_mouseOver$y)
     })
   }
