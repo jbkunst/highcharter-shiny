@@ -1,7 +1,3 @@
-Title: Hello Word with highcharter
-Author: Joshua Kunst
-AuthorUrl: https://jkunst.com/
-License: MIT
-DisplayMode: Showcase
-Tags: proxy
-Type: Shiny
+Title: Getting Started with Highcharter
+Description: Learn the basic Shiny integration pattern using highchartOutput() and renderHighchart() with two simple charts.
+Categories: getting started, shiny, charts
