@@ -1,5 +1,3 @@
-Title: Shiny Events Demo
-Author: Martin John Hadley, @martinjhnhadley
-License: MIT
-DisplayMode: Showcase
-Type: Shiny
+Title: Point Events Demo
+Description: See how point click and mouseover events update reactive Shiny interface elements.
+Categories: events, interactivity, shiny
