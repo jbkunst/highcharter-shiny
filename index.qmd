@@ -1,0 +1,28 @@
+---
+title: "Highcharter Shiny Examples"
+page-layout: full
+listing:
+  - id: apps-list
+    contents: apps.yml
+    type: grid
+    grid-columns: 3
+    sort-ui: false
+    filter-ui: true
+    categories: true
+    image-lazy-loading: true
+    field-required:
+      - title
+      - description
+      - image
+---
+
+:::{.catalog-hero}
+:::{.catalog-kicker}
+Interactive examples
+:::
+
+Small Shiny applications showing Highcharter features and interaction patterns.
+:::
+
+:::{#apps-list}
+:::
