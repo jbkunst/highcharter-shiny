@@ -6,14 +6,29 @@ app_theme <- bs_theme(
   version = 5,
   bootswatch = "flatly",
   primary = "#47475c",
-  success = "#a3edba"
+  secondary = "#73738c",
+  success = "#a3edba",
+  bg = "#f7f8fb",
+  fg = "#47475c"
 )
 
-ui <- fluidPage(
+ui <- page_fluid(
+  title = "Getting started with Highcharter",
   theme = app_theme,
-  fluidRow(
-    column(width = 6, highchartOutput("chart1")),
-    column(width = 6, highchartOutput("chart2"))
+  h2("Getting started with Highcharter"),
+  p("The minimal pattern for rendering Highcharter widgets in Shiny."),
+  layout_columns(
+    col_widths = c(6, 6),
+    card(
+      full_screen = TRUE,
+      card_header("Highcharts demo"),
+      highchartOutput("chart1")
+    ),
+    card(
+      full_screen = TRUE,
+      card_header("Iris scatter plot"),
+      highchartOutput("chart2")
+    )
   )
 )
 
