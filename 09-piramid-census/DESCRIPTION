@@ -1,6 +1,3 @@
-Title: Piramid Census
-Author: Joshua Kunst
-AuthorUrl: https://jkunst.com/
-License: MIT
-DisplayMode: Showcase
-Type: Shiny
+Title: Population Pyramid and Median Age
+Description: Explore population pyramids and median-age trends by country and year through linked charts.
+Categories: demographics, maps, time series
