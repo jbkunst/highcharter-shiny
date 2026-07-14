@@ -1,4 +1,5 @@
-This is an example showing how highcharter widgets can be put inside in a
-valueBoxes from the packages shinydashboard or bs4dash. You can see more details
-in https://jkunst.com/blog/posts/2020-06-26-valuebox-and-sparklines/.
+This example places small Highcharter charts inside `shinydashboard` value boxes.
 
+The sparkline charts use compact dimensions, simplified axes, and dedicated themes so they work as supporting indicators rather than full-size visualizations.
+
+The same pattern can be adapted to other dashboard components that accept HTML content.
