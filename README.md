@@ -2,7 +2,7 @@
 
 This repository contains small Shiny applications demonstrating Highcharter features, interactions, maps, dashboards, and time-series visualizations.
 
-The public catalog is generated with Quarto into `docs/`.
+The applications use `bslib` for modern Bootstrap 5 layouts, cards, sidebars, value boxes, and a shared visual identity. The public catalog is generated with Quarto into `docs/`.
 
 ## Repository structure
 
@@ -15,6 +15,17 @@ The public catalog is generated with Quarto into `docs/`.
 - `apps.yml`: generated catalog data.
 - `site-build-report.json`: generated build report.
 - `docs/`: generated website published with GitHub Pages.
+
+## Application UI
+
+The examples use `bslib` components such as:
+
+- `page_fluid()` and `page_sidebar()`;
+- `layout_columns()`;
+- `card()` and `card_header()`;
+- `value_box()` for dashboard summaries.
+
+The common palette follows the Highcharter site: dark violet, soft mint, and a light neutral background.
 
 ## App metadata
 
