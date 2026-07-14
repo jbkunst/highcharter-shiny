@@ -1,6 +1,6 @@
-Highcharter event helpers can expose chart interactions as Shiny input values.
+This `bslib` example shows how Highcharter event helpers expose chart interactions as Shiny input values.
 
-This app compares point and series events for:
+The dashboard compares point and series events for:
 
 - `click`;
 - `mouseOver`.
