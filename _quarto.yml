@@ -7,8 +7,9 @@ project:
     - site-assets/
 
 website:
-  title: "Highcharter Shiny Examples"
+  title: "highcharter shiny"
   site-url: "https://jbkunst.github.io/highcharter-shiny/"
+  repo-url: "https://github.com/jbkunst/highcharter-shiny"
   search: false
   navbar:
     pinned: true
@@ -19,10 +20,15 @@ website:
       - icon: github
         href: "https://github.com/jbkunst/highcharter-shiny"
         aria-label: "GitHub repository"
+  page-footer:
+    left: "Highcharter Shiny examples"
+    right: "Built with Quarto and Shinylive"
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - site-assets/highcharter.scss
     toc: false
     anchor-sections: false
     smooth-scroll: true
