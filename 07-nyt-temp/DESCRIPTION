@@ -1,6 +1,3 @@
-Title: NYTimes temperature app
-Author: Joshua Kunst
-AuthorUrl: https://jkunst.com/
-License: MIT
-DisplayMode: Showcase
-Type: Shiny
+Title: NYTimes Temperature Visualization
+Description: Explore daily temperature ranges, records, precipitation, and radial weather views for selected cities.
+Categories: weather, time series, visualization
