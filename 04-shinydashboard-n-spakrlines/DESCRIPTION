@@ -1,6 +1,3 @@
-Title: Highcharter widgets in valueBoxes
-Author: Joshua Kunst
-AuthorUrl: https://jkunst.com/
-License: MIT
-DisplayMode: Showcase
-Type: Shiny
+Title: Highcharter Sparklines in Value Boxes
+Description: Embed compact Highcharter charts inside shinydashboard value boxes.
+Categories: dashboards, sparklines, layout
