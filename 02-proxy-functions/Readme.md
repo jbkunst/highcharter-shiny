@@ -1,6 +1,6 @@
-Proxy functions update an existing Highcharter widget without rebuilding the full chart.
+This `bslib` dashboard demonstrates how proxy functions update an existing Highcharter widget without rebuilding the full chart.
 
-This example covers operations such as:
+The examples cover operations such as:
 
 - adding and removing series;
 - replacing series data;
