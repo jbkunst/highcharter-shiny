@@ -1,0 +1,89 @@
+- title: Getting Started with Highcharter
+  description: Learn the basic Shiny integration pattern using highchartOutput() and
+    renderHighchart() with two simple charts.
+  image: site-assets/screenshots/01-get-started.png
+  categories:
+  - getting started
+  - shiny
+  - charts
+  path: live/01-get-started/index.html
+- title: Highcharter Proxy Functions
+  description: Explore how proxy functions add, remove, and update chart series and
+    points without rebuilding the widget.
+  image: site-assets/screenshots/02-proxy-functions.png
+  categories:
+  - proxy
+  - interactivity
+  - shiny
+  path: live/02-proxy-functions/index.html
+- title: Chart Events as Shiny Inputs
+  description: Inspect point and series mouseover and click events exposed by Highcharter
+    as Shiny input values.
+  image: site-assets/placeholder.svg
+  categories:
+  - events
+  - interactivity
+  - shiny
+  path: live/03-events/index.html
+- title: Point Events Demo
+  description: See how point click and mouseover events update reactive Shiny interface
+    elements.
+  image: site-assets/screenshots/03-events-v2.png
+  categories:
+  - events
+  - interactivity
+  - shiny
+  path: live/03-events-v2/index.html
+- title: Highcharter Sparklines in Value Boxes
+  description: Embed compact Highcharter charts inside modern bslib value boxes.
+  image: site-assets/screenshots/04-shinydashboard-n-spakrlines.png
+  categories:
+  - dashboards
+  - sparklines
+  - layout
+  path: live/04-shinydashboard-n-spakrlines/index.html
+- title: ARMA Process Simulation
+  description: See how AR and MA settings change a simulated time series and its autocorrelation
+    patterns.
+  image: site-assets/screenshots/05-arma.png
+  categories:
+  - statistics
+  - simulation
+  - time series
+  path: live/05-arma/index.html
+- title: Highcharts Map Loading Performance
+  description: Compare a preloaded Highcharts map with map data transferred from the
+    Shiny server.
+  image: site-assets/screenshots/06-maps-performance.png
+  categories:
+  - maps
+  - performance
+  - data loading
+  path: live/06-maps-performance/index.html
+- title: NYTimes Temperature Visualization
+  description: Explore daily temperature ranges, records, precipitation, and radial
+    weather views for selected cities.
+  image: site-assets/screenshots/07-nyt-temp.png
+  categories:
+  - weather
+  - time series
+  - visualization
+  path: live/07-nyt-temp/index.html
+- title: International Population Explorer
+  description: Explore population projections by country and age group using linked
+    area and detail charts.
+  image: site-assets/screenshots/08-idb-viz.png
+  categories:
+  - demographics
+  - population
+  - time series
+  path: live/08-idb-viz/index.html
+- title: Population Pyramid and Median Age
+  description: Explore population pyramids and median-age trends by country and year
+    through linked charts.
+  image: site-assets/screenshots/09-piramid-census.png
+  categories:
+  - demographics
+  - maps
+  - time series
+  path: live/09-piramid-census/index.html

@@ -1,0 +1,69 @@
+{
+  "app_count": 10,
+  "draft_apps": [],
+  "shinylive_ok": ["01-get-started", "02-proxy-functions", "03-events", "03-events-v2", "04-shinydashboard-n-spakrlines", "05-arma", "06-maps-performance", "07-nyt-temp", "08-idb-viz", "09-piramid-census"],
+  "shinylive_failed": [],
+  "server_apps": [],
+  "apps": [
+    {
+      "slug": "01-get-started",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "02-proxy-functions",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "03-events",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "03-events-v2",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "04-shinydashboard-n-spakrlines",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "05-arma",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "06-maps-performance",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "07-nyt-temp",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "08-idb-viz",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    },
+    {
+      "slug": "09-piramid-census",
+      "runtime": "shinylive",
+      "result": "shinylive",
+      "message": "Shinylive export completed."
+    }
+  ]
+}

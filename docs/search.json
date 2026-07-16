@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Highcharter Shiny Examples",
+    "section": "",
+    "text": "R / Shiny / Highcharts\n\n\n\nInteractive examples for learning chart configuration, proxy updates, events, dashboards, maps, and time-series patterns.\n\nBrowse the source code Read the Highcharter documentation"
+  },
+  {
+    "objectID": "index.html#examples",
+    "href": "index.html#examples",
+    "title": "Highcharter Shiny Examples",
+    "section": "Examples",
+    "text": "Examples\nUse the search box or category filters to find an example. Apps are exported with Shinylive unless their metadata explicitly requires a server runtime.\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGetting Started with Highcharter\n\n\n\ngetting started\n\nshiny\n\ncharts\n\n\n\nLearn the basic Shiny integration pattern using highchartOutput() and renderHighchart() with two simple charts.\n\n\n\n\n\n\n\n\n\n\n\n\nHighcharter Proxy Functions\n\n\n\nproxy\n\ninteractivity\n\nshiny\n\n\n\nExplore how proxy functions add, remove, and update chart series and points without rebuilding the widget.\n\n\n\n\n\n\n\n\n\n\n\n\nChart Events as Shiny Inputs\n\n\n\nevents\n\ninteractivity\n\nshiny\n\n\n\nInspect point and series mouseover and click events exposed by Highcharter as Shiny input values.\n\n\n\n\n\n\n\n\n\n\n\n\nPoint Events Demo\n\n\n\nevents\n\ninteractivity\n\nshiny\n\n\n\nSee how point click and mouseover events update reactive Shiny interface elements.\n\n\n\n\n\n\n\n\n\n\n\n\nHighcharter Sparklines in Value Boxes\n\n\n\ndashboards\n\nsparklines\n\nlayout\n\n\n\nEmbed compact Highcharter charts inside modern bslib value boxes.\n\n\n\n\n\n\n\n\n\n\n\n\nARMA Process Simulation\n\n\n\nstatistics\n\nsimulation\n\ntime series\n\n\n\nSee how AR and MA settings change a simulated time series and its autocorrelation patterns.\n\n\n\n\n\n\n\n\n\n\n\n\nHighcharts Map Loading Performance\n\n\n\nmaps\n\nperformance\n\ndata loading\n\n\n\nCompare a preloaded Highcharts map with map data transferred from the Shiny server.\n\n\n\n\n\n\n\n\n\n\n\n\nNYTimes Temperature Visualization\n\n\n\nweather\n\ntime series\n\nvisualization\n\n\n\nExplore daily temperature ranges, records, precipitation, and radial weather views for selected cities.\n\n\n\n\n\n\n\n\n\n\n\n\nInternational Population Explorer\n\n\n\ndemographics\n\npopulation\n\ntime series\n\n\n\nExplore population projections by country and age group using linked area and detail charts.\n\n\n\n\n\n\n\n\n\n\n\n\nPopulation Pyramid and Median Age\n\n\n\ndemographics\n\nmaps\n\ntime series\n\n\n\nExplore population pyramids and median-age trends by country and year through linked charts.\n\n\n\n\n\nNo matching items"
+  }
+]

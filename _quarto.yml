@@ -20,10 +20,6 @@ website:
       - icon: github
         href: "https://github.com/jbkunst/highcharter-shiny"
         aria-label: "GitHub repository"
-  page-footer:
-    left: "Highcharter Shiny examples"
-    right: "Built with Quarto and Shinylive"
-
 format:
   html:
     theme:

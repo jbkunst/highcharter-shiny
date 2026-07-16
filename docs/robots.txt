@@ -1,0 +1,1 @@
+Sitemap: https://jbkunst.github.io/highcharter-shiny/sitemap.xml

@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 *debug.log
+/.quarto/
+**/*.quarto_ipynb
