@@ -1,5 +1,3 @@
-Title: Improving a map performance
-Author: Joshua Kunst
-AuthorUrl: http://jkunst.com
-License: GPL-3
-DisplayMode: Showcase
+Title: Highcharts Map Loading Performance
+Description: Compare a preloaded Highcharts map with map data transferred from the Shiny server.
+Categories: maps, performance, data loading

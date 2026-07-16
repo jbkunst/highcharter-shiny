@@ -1,5 +1,6 @@
-This small Shiny application show how to integrate highcharter in Shiny web
-appliaction.
+This `bslib` example shows the minimal pattern for using Highcharter inside a Shiny application.
 
-The main function are `highchartOutput` and `renderHighchart` and work the 
-same way like other widgets like DT, Plotly o recharts4r.
+- `page_fluid()` and `card()` provide the responsive layout.
+- `highchartOutput()` creates each chart container.
+- `renderHighchart()` builds the chart on the server.
+- The example combines a built-in Highcharts demo with an `iris` scatter plot.

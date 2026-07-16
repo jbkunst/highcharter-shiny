@@ -1,6 +1,3 @@
-Title: Events functions helpers
-Author: Joshua Kunst
-AuthorUrl: https://jkunst.com/
-License: MIT
-DisplayMode: Showcase
-Type: Shiny
+Title: Chart Events as Shiny Inputs
+Description: Inspect point and series mouseover and click events exposed by Highcharter as Shiny input values.
+Categories: events, interactivity, shiny

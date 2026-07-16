@@ -1,0 +1,39 @@
+---
+title: "Highcharter Shiny Examples"
+page-layout: full
+listing:
+  - id: apps-list
+    contents: apps.yml
+    type: grid
+    grid-columns: 4
+    sort-ui: false
+    filter-ui: true
+    categories: true
+    image-lazy-loading: true
+    field-required:
+      - title
+      - description
+      - image
+---
+
+:::{.catalog-hero}
+:::{.catalog-kicker}
+R · Shiny · Highcharts
+:::
+
+# Highcharter Shiny Gallery
+
+Interactive examples for learning chart configuration, proxy updates, events, dashboards, maps, and time-series patterns.
+
+:::{.catalog-actions}
+[Browse the source code](https://github.com/jbkunst/highcharter-shiny){.btn .btn-primary}
+[Read the Highcharter documentation](https://jkunst.com/highcharter/){.btn .btn-outline-light}
+:::
+:::
+
+## Examples {.catalog-section-title}
+
+Use the search box or category filters to find an example. Apps are exported with Shinylive unless their metadata explicitly requires a server runtime.
+
+:::{#apps-list}
+:::

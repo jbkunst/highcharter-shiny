@@ -1,10 +1,20 @@
 library(shiny)
+library(bslib)
 library(purrr)
 library(dplyr)
 library(rlist)
 library(highcharter)
 library(viridisLite)
-library(shinythemes)
+
+app_theme <- bs_theme(
+  version = 5,
+  bootswatch = "flatly",
+  primary = "#47475c",
+  secondary = "#73738c",
+  success = "#a3edba",
+  bg = "#f7f8fb",
+  fg = "#47475c"
+)
 
 load("dataappmin.RData")
 # data("worldgeojson")
@@ -15,7 +25,7 @@ input <- list(yr = sample(yrs, size = 1), hcworldinput = "Canada")
 
 slider <- sliderInput(
   "yr",
-  NULL,
+  "Year",
   value = min(yrs),
   min = min(yrs),
   max = max(yrs),
